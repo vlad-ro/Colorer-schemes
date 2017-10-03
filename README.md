@@ -7,10 +7,13 @@ The project contains files and scripts for creation of library of schemes.
 
 *Improvements of translation of this file to English are welcome*
 
-Changes between the fork and the upstream
+Changes from upstream
 ------------------------
 
   * Fix build issue under Windows where perl output redirected to a file is trimmed
+  * hrc/test/runtest.py: Update to work with Python3, TODO: check changes with Python2
+  * hrc/test/runtest.pl: Force text diffs
+  * TODO: check for test failures under Linux, shows 5 under Windows
 
 Structure
 ------------------------
@@ -100,9 +103,9 @@ Descriptions of syntaxes (scheme) are divided into static and generated. Static 
 After scheme change, it is necessary test changes for regressions. For this purpose it is necessary:
 
   1. to build the library of schemes `build base`
-  2. check that bin directory in the root of the project has colorer.exe (the utility for working with library of schemes)
+  2. check that bin directory in the root of the project has colorer.exe (the utility for working with library of schemes); you can get it here: https://sourceforge.net/projects/colorer/files/console/
   3. in hrc/test directory start script `perl runtest.pl --full`, or its alternative `runtest.py` 
-  4. script will check the result of coloring of reference file, the result is output to the console and fails.html file in hrc/test/*time_of_test* directory.
+  4. script will check the result of coloring of reference files, the result is output to the console and fails.html file in hrc/test/*time_of_test* directory.
   5. after the analysis of divergences in case of mistakes it is necessary to correct the scheme. If the current coloring is considered correct, it is necessary to replace the reference file with the new one.
      Reference files reside in hrc/test/_valid. New files reside in hrc/test/*time_of_test*
 
