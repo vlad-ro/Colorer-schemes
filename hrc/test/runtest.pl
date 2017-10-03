@@ -23,7 +23,7 @@ my $catalog_path = $root_path.$prop_path{catalog};
 my $hrd_path     = $root_path.$prop_path{"build-dir"}."/".$prop_path{"base-dir"}."/".$prop_path{"hrd"};
 
 my $colorer  = "$colorer_path/colorer -c $catalog_path -eh $colorer_path/error.log";
-my $diff  = 'diff -U 1 -bB';
+my $diff  = 'diff -U 1 -bB --text';
 
 
 my $hrd = (defined $ENV{COLORER5HRD}) ? $ENV{COLORER5HRD} : 'white';
