@@ -10,8 +10,9 @@ The project contains files and scripts for creation of library of schemes.
 Changes from upstream
 ------------------------
 
-  * Fix build issue under Windows where perl output redirected to a file is trimmed
-  * hrc/test/runtest.py: Update to work with Python3, TODO: check changes with Python2
+  * Added new syntax for Groovy and gsp (and Jenkinsfile)
+  * Fixed build issue under Windows where perl output redirected to a file is trimmed
+  * hrc/test/runtest.py: Updated to work with Python3, TODO: check changes with Python2
   * hrc/test/runtest.pl: Force text diffs
   * TODO: check for test failures under Linux, shows 5 under Windows
 
