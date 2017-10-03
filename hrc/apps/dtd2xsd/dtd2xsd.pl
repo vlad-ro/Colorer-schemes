@@ -65,6 +65,9 @@ while ($#ARGV >= 0) {
      push(@ComplexTypePatterns, shift(@ARGV));
    } elsif ($para eq "-debug") {
       $debug = 1;
+   } elsif ($para eq "-o") {
+      my($outputfile) = shift(@ARGV);
+      open STDOUT, ">", $outputfile
    } else {
       $file = $para;
    }

@@ -10,6 +10,12 @@ my $mconst=0;
 my ($class, $method, $dl, $depr);
 my %rep=('<' => '&lt;', '>' => '&gt;', '&' => '&amp;', '"' => '&quot;', "'" => '&apos;');
 
+if ($#ARGV >= 2 and $ARGV[0] eq "-o")
+{
+    shift(@ARGV);
+    open STDOUT, ">", shift(@ARGV);
+}
+
 print <<XMLS;
 <?xml version="1.0" encoding="windows-1251"?>
 <php>

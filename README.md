@@ -7,6 +7,11 @@ The project contains files and scripts for creation of library of schemes.
 
 *Improvements of translation of this file to English are welcome*
 
+Changes between the fork and the upstream
+------------------------
+
+  * Fix build issue under Windows where perl output redirected to a file is trimmed
+
 Structure
 ------------------------
 

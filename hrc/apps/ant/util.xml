@@ -29,8 +29,8 @@
 
 <target name="dtd2xsd" depends="dtd2xsd.prop">
  <echo level="info" message="Transform dtd to xsd"/>
- <exec executable="perl" output="${util.output}">
-  <arg line='${dtd2xsd}/dtd2xsd.pl -mapfile ${dtd2xsd.map} -prefix ${dtd2xsd.pre} -ns "${dtd2xsd.ns}"  ${util.input}'/>
+ <exec executable="perl">
+  <arg line='${dtd2xsd}/dtd2xsd.pl -mapfile ${dtd2xsd.map} -prefix ${dtd2xsd.pre} -ns "${dtd2xsd.ns}" -o ${util.output} ${util.input}'/>
  </exec> 
  <delete>
   <fileset dir="." includes="*.out"/>

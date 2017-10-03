@@ -22,8 +22,8 @@
 </target>
 
 <target name="pack-xml" depends="pack-xml.check" unless="pack-xml.check"> 
- <exec executable="perl" output="${obj}/php.xml">
-  <arg line='${src}/php.pl ${src}/php.lst'/>
+ <exec executable="perl">
+  <arg line='${src}/php.pl -o ${obj}/php.xml ${src}/php.lst'/>
  </exec> 
  <echo level="info" message="Create php.xml"/>
 </target>
