@@ -155,8 +155,10 @@ def run_one_test(test):
 pool = multiprocessing.pool.ThreadPool()
 results = pool.map(run_one_test, test_list)
 
+print("Generating report...")
+
 for test, ret, origname, outname in results:
-  fail_log.write('<div><pre class="testname">%s</pre><pre>' % test)
+  fail_log.write('<div><pre class="testname">%s</pre><pre>\n' % test)
 
   if ret != 0:
     failed += 1
@@ -164,7 +166,7 @@ for test, ret, origname, outname in results:
     fail_log.write("Failed: colorer returned %s" % ret)
     # BUG: colorer doesn't return any error codes in some error cases
     #      like absent hrd catalogs or 
-    fail_log.write('</pre><div>')
+    fail_log.write('</pre></div>')
     continue
 
   # XXX: colorer.exe compiled with MinGW produces output with unix line ends
@@ -187,7 +189,7 @@ for test, ret, origname, outname in results:
     fail_log.write(origname + "does not exist!")
     changed += 1
 
-  fail_log.write('</pre><div>')
+  fail_log.write('</pre></div>')
 
 fail_log.write('</body></html>')
 fail_log.close()
