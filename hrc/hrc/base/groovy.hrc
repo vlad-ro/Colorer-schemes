@@ -17,7 +17,9 @@
       <prototype name="groovy" group="main" description="Groovy">
         <location link="groovy.hrc"/>
         <filename>/\.groovy$/i</filename>
-        <firstline>/import/</firstline>
+        <filename>/Jenkinsfile/i</filename>
+        <firstline>/^import/</firstline>
+        <firstline>/^#!groovy/</firstline>
         <parameters>
           <param name="j2se-classes" value="true" description="Use some common used J2SE class names"/>
           <param name="tabs-as-errors" value="false" description="Shows tabulation symbol as error"/>
