@@ -191,6 +191,7 @@
   <prototype name="groovy" group="main" description="Groovy">
     <location link="base/groovy.hrc"/>
     <filename>/\.groovy$/i</filename>
+    <filename>/\.gdsl$/i</filename>
     <filename>/Jenkinsfile/i</filename>
     <firstline>/^import/</firstline>
     <firstline>/^#!groovy/</firstline>
