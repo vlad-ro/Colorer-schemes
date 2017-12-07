@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """\
 Automatic HRC changes tests runner.
 Validates parsing result for a set of source files against
