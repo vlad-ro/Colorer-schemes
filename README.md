@@ -1,4 +1,4 @@
-﻿[![Travis](https://img.shields.io/travis/colorer/Colorer-schemes.svg)](https://travis-ci.org/colorer/Colorer-schemes)
+﻿[![Travis](https://img.shields.io/travis/vlad-ro/Colorer-schemes.svg)](https://travis-ci.org/vlad-ro/Colorer-schemes)
 
 Colorer schemes
 ========================
@@ -14,7 +14,7 @@ Changes from upstream
   * Fixed build issue under Windows where perl output redirected to a file is trimmed
   * hrc/test/runtest.py: Updated to work with Python3
   * hrc/test/runtest.pl: Force text diffs
-  * TODO: check for test failures under Linux, shows 5 under Windows
+  * TODO: sort out test failures, shows 5 under Windows, 13 under MacOS X
 
 Structure
 ------------------------
