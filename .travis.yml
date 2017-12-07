@@ -1,6 +1,6 @@
 language: java
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y ant-optional
+  - sudo apt-get install -y libxerces2-java
 script:
   - if test -z "$LOCALCLASSPATH"; then export LOCALCLASSPATH="/usr/share/java/xmlParserAPIs.jar:/usr/share/java/xercesImpl.jar"; else export LOCALCLASSPATH="/usr/share/java/xmlParserAPIs.jar:/usr/share/java/xercesImpl.jar:$LOCALCLASSPATH"; fi; ./build.sh
