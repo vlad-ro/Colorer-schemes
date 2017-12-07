@@ -1,5 +1,6 @@
 language: java
-before_script:
-  - if test -z "$LOCALCLASSPATH"; then export LOCALCLASSPATH="/usr/share/java/xmlParserAPIs.jar:/usr/share/java/xercesImpl.jar"; else export LOCALCLASSPATH="/usr/share/java/xmlParserAPIs.jar:/usr/share/java/xercesImpl.jar:$LOCALCLASSPATH"; fi
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y ant-optional
 script:
-  - ./build.sh
+  - if test -z "$LOCALCLASSPATH"; then export LOCALCLASSPATH="/usr/share/java/xmlParserAPIs.jar:/usr/share/java/xercesImpl.jar"; else export LOCALCLASSPATH="/usr/share/java/xmlParserAPIs.jar:/usr/share/java/xercesImpl.jar:$LOCALCLASSPATH"; fi; ./build.sh
